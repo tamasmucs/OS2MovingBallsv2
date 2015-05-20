@@ -47,6 +47,14 @@ public class BallRunnable implements Runnable {
                 }
                 busySleep(ball.getSpeed());
             }
+            //When interrupted...
+            if(ball.isInCs()){
+                if(ball.isWriter){
+                    app.RW.exitWriter();
+                }else{
+                    app.RW.exitReader();
+                }
+            }
         } catch (InterruptedException ex) {}
     }
 }

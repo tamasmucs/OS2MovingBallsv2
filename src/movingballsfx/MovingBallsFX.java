@@ -52,7 +52,7 @@ public class MovingBallsFX extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        ThreadOverview to = new ThreadOverview();
+        //ThreadOverview to = new ThreadOverview();
         // Create the scene
         Group root = new Group();
         Scene scene = new Scene(root, maxX, maxY+(4*radius));
@@ -89,7 +89,6 @@ public class MovingBallsFX extends Application {
                     @Override
                     public void handle(MouseEvent event) {
                         readersHavePriority = !readersHavePriority;
-                        System.out.println("Rear priority is now "+readersHavePriority);
                     }
                 });
 
